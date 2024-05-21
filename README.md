@@ -77,7 +77,7 @@ Contributions are welcome! Follow these steps to contribute:
 4. Push your changes to your fork.
 5. Submit a pull request to the main repository.
 
-##Note: 
+## Note: 
 This isn't the final version it has many things hardcoded.
 
 ## License
