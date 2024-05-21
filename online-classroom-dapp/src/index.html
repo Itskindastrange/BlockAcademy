@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BlockAcademy - Info</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px; 
+        background-color: #f0f0f0;
+        display: flex; 
+        flex-direction: column; 
+        align-items: center;
+      }
+      h1, h2 {
+        color: #333;
+        align-self: flex-start; /* Align the headings to the start */
+      }
+      p, ul {
+        line-height: 1.6;
+        align-self: flex-start; /* Align the paragraphs and lists to the start */
+      }
+      #signInButton {
+        display: inline-block;
+        background-color: #008CBA;
+        color: white;
+        padding: 14px 20px;
+        margin: 10px 2px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      #signInButton:hover {
+        background-color: #007B9A;
+      }
+    </style>
+</head>
+<body>
+  <h1>Welcome to BlockAcademy!</h1>
+  <p>BlockAcademy is an online classroom built on the Ethereum blockchain. Here, you can view all students in the classroom.</p>
+  <h2>Features</h2>
+  <ul>
+    <li><strong>View Students:</strong> Easily view all students in the classroom.</li>
+    <li><strong>Secure:</strong> Built on the Ethereum blockchain for secure and transparent operations.</li>
+    <li><strong>Easy to Use:</strong> Simple and intuitive interface.</li>
+    <!-- Add more features here -->
+  </ul>
+  <h2>About BlockAcademy</h2>
+  <p>BlockAcademy is the main address of Education, Training, and Study! BlockAcademy is a cutting-edge online learning management system designed by Google to foster effective communication and collaboration between educators and students. Its primary objective is to simplify the sharing and delivery of learning resources, including course materials, assignments, surveys, and documents.</p>
+  <!-- Add the rest of the BlockAcademy info here -->
+  <button id="signInButton">Sign in with MetaMask</button>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/web3.min.js"></script>
+  <script src="js/truffle-contract.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

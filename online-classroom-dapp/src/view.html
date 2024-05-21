@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BlockAcademy</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">BlockAcademy</a>
+    <span class="navbar-text ml-auto">Class: Blockchain</span>
+  </nav>
+
+  <div class="container" style="margin-top: 20px;">
+    <!-- Links -->
+    <a href="class.html" class="btn btn-primary">Stream</a>
+    <a href="view.html" class="btn btn-secondary">People</a>
+
+    <!-- Students Table -->
+    <table class="table table-striped mt-3">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+      <tbody id="studentsTable">
+        <!-- STUDENTS LOAD HERE -->
+      </tbody>
+    </table>
+  </div>
+
+  <script id="studentTemplate" type="text/template">
+    <tr>
+      <td class="student-id"></td>
+      <td class="student-name"></td>
+      <td class="student-age"></td>
+    </tr>
+  </script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/web3.min.js"></script>
+  <script src="js/truffle-contract.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

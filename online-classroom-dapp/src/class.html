@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BlockAcademy - Class</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">BlockAcademy</a>
+    <span class="navbar-text ml-auto">Class: Blockchain</span>
+  </nav>
+
+  <div class="container" style="margin-top: 20px;">
+    <!-- Links -->
+    <a href="class.html" class="btn btn-primary">Stream</a>
+    <a href="view.html" class="btn btn-secondary">People</a>
+    <a href="attendance.html" class="btn btn-secondary">Attendance</a>
+
+    <!-- Class Card -->
+    <div class="card mt-3">
+      <div class="card-body">
+        <h5 class="card-title">Class: Blockchain</h5>
+        <a href="assignment.html" class="btn btn-secondary">View Assignments</a>
+      </div>
+    </div>
+
+    <!-- Announcement Section -->
+    <div class="card mt-3">
+      <div class="card-body">
+        <h5 class="card-title">Make Announcement</h5>
+        <textarea id="announcementInput" class="form-control" rows="3"></textarea>
+        <button id="submitAnnouncementButton" class="btn btn-primary mt-2">Submit</button>
+        <div id="announcements" class="mt-3"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/web3.min.js"></script>
+  <script src="js/truffle-contract.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    $(document).ready(function() {
+        $('#submitAnnouncementButton').click(function() {
+            var announcementInput = $('#announcementInput').val();
+            var currentTime = new Date().toLocaleString();
+            var newAnnouncement = $('<div class="card mt-3"><div class="card-body">' + announcementInput + '<span class="float-right">' + currentTime + '</span></div></div>');
+            $('#announcements').append(newAnnouncement);
+            $('#announcementInput').val('');
+    
+            // Call the makeAnnouncement function after the new announcement is added
+            var studentId = 1; // The student ID
+            var studentAddress = web3.eth.accounts[0]; // The student's Ethereum address
+            App.registerStudentAddress(studentId, studentAddress);
+            App.makeAnnouncement(studentId, announcementInput);
+        });
+    });
+    </script>
+
+</body>
+</html>
